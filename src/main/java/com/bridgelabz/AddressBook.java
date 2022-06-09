@@ -100,7 +100,25 @@ public class AddressBook
                                 System.out.println("Enter valid FirstName : ");
                         }
                 }
+        }
 
+        // Delete Contact details
+        public void deleteDetails()
+        {
+                System.out.println("Confirm the first name of the person to delete contact : ");
+                String confirmName = scanner.next();
+                for (int i=0; i<contactList.size(); i++)
+                {
+                        if(contactList.get(i).getFirstName().equals(confirmName))
+                        {
+                                contactList.remove(i);
+                                System.out.println("After Removing List : " +contactList);
+                        }
+                        else
+                        {
+                                System.out.println("Enter Valid FirstName : ");
+                        }
+                }
         }
 
 }
