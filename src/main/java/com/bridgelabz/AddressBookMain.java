@@ -1,15 +1,38 @@
 package com.bridgelabz;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class AddressBookMain
 {
     public static void main(String[] args) {
         System.out.println("*-*-*-*-*-*-*-*-*-*-*- Wel come to AddressBook System -*-*-*-*-*-*-*-*-*-*-*-*-*-*");
-         AddressBook addressBook = new AddressBook();
-         Contact contact = new Contact();
-         addressBook.addDetail();
-         addressBook.display();
+        System.out.println();
+        AddressBook addressBook = new AddressBook();
+        Scanner scanner = new Scanner(System.in);
+//        addressBook.addDetail();
+//        addressBook.display();
+
+        int choice;
+        do {
+            System.out.println("Enter your Choice : \n 1.Add Detail \n 2.Display Detail \n 3.Edit Detail ");
+            choice = scanner.nextInt();
+            switch (choice) {
+                case 1:
+                    addressBook.addDetail();
+                    break;
+                case 2:
+                    addressBook.display();
+                    break;
+                case 3:
+                    addressBook.editDetails();
+                    break;
+                default:
+                    System.out.println(" You Enter Wrong Option");
+
+            }
+        }
+        while (choice != 3);
 
     }
 }
