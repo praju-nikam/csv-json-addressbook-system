@@ -8,7 +8,7 @@ public class AddressBook
         ArrayList<Contact> contactList = new ArrayList<>();
        static Scanner scanner = new Scanner(System.in);
 
-        // contact object by getting input from user
+        // Added Contact by using contact object by getting input from user
         public void addDetail()
         {
                 Contact contact = new Contact();

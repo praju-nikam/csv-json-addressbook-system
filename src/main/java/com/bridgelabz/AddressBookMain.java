@@ -10,12 +10,11 @@ public class AddressBookMain
         System.out.println();
         AddressBook addressBook = new AddressBook();
         Scanner scanner = new Scanner(System.in);
-//        addressBook.addDetail();
-//        addressBook.display();
 
         int choice;
         do {
-            System.out.println("Enter your Choice : \n 1.Add Detail \n 2.Display Detail \n 3.Edit Detail \n 4.Delete Detail ");
+            System.out.println("Enter your Choice : \n 1.Add Detail \n 2.Display Detail \n 3.Edit Detail \n" +
+                    " 4.Delete Detail \n 5.Exit ");
             choice = scanner.nextInt();
             switch (choice) {
                 case 1:
@@ -30,6 +29,8 @@ public class AddressBookMain
                 case 4:
                     addressBook.deleteDetails();
                     break;
+                case 5:
+                    System.out.println("You are Exit ");
                 default:
                     System.out.println(" You Enter Wrong Option");
 
