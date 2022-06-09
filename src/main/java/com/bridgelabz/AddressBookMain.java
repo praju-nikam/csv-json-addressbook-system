@@ -15,7 +15,7 @@ public class AddressBookMain
 
         int choice;
         do {
-            System.out.println("Enter your Choice : \n 1.Add Detail \n 2.Display Detail \n 3.Edit Detail ");
+            System.out.println("Enter your Choice : \n 1.Add Detail \n 2.Display Detail \n 3.Edit Detail \n 4.Delete Detail ");
             choice = scanner.nextInt();
             switch (choice) {
                 case 1:
@@ -27,12 +27,15 @@ public class AddressBookMain
                 case 3:
                     addressBook.editDetails();
                     break;
+                case 4:
+                    addressBook.deleteDetails();
+                    break;
                 default:
                     System.out.println(" You Enter Wrong Option");
 
             }
         }
-        while (choice != 3);
+        while (choice != 4);
 
     }
 }
